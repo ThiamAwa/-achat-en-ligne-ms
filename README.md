@@ -232,11 +232,12 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
  ![image1](img1.png)
   ![img2](img2.png)
   ![img3](img3.png)
-> Pour tester les endpoints protégés dans Swagger :
-> 1. Appeler `POST /api/auth/login`
-> 2. Copier le token reçu
-> 3. Cliquer sur **Authorize 🔒** en haut à droite
-> 4. Saisir `Bearer <votre_token>`
+  ![img4](img4.png)
+ Pour tester les endpoints protégés dans Swagger :
+ 1. Appeler `POST /api/auth/login`
+ 2. Copier le token reçu
+3. Cliquer sur **Authorize 🔒** en haut à droite
+ 4. Saisir `Bearer <votre_token>`
 
 ---
 
