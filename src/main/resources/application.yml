@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: achat-en-ligne-ms
+  datasource:
+    url: jdbc:postgresql://localhost:5432/achatdb
+    username: postgres
+    password: passer
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    open-in-view: false
+  cache:
+    type: caffeine
+    caffeine:
+      spec: maximumSize=500, expireAfterAccess=600s
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.groupeisi.company: DEBUG
+    org.hibernate.SQL: DEBUG
+
+jwt:
+  secret: "votreCleSecreteDoitEtreTresLongueEtAleatoirePourLaSecurite"
+  expiration: 86400000
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs
