@@ -229,9 +229,9 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
 ## Documentation API
 
 - Swagger UI : `http://localhost:8080/swagger-ui/index.html`
- ![image1](img.png)
-  ![img2](img_1.png)
-  ![img3](img_2.png)
+ ![image1](img1.png)
+  ![img2](img2.png)
+  ![img3](img3.png)
 > Pour tester les endpoints protégés dans Swagger :
 > 1. Appeler `POST /api/auth/login`
 > 2. Copier le token reçu
