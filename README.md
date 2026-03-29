@@ -4,11 +4,11 @@
 ![Auteur](https://img.shields.io/badge/Groupeisi-Java-green)
 ![SpringBoot](https://img.shields.io/badge/Achat--en--Ligne-SpringBoot-yellowgreen)
 ![Java Version](https://img.shields.io/badge/Java-17-blue)
-![Maven](https://img.shields.io/badge/Maven-3.x-blueviolet)
+![Maven](https://img.shields.io/badge/Maven-3.9.6-blueviolet)
 ![Swagger](https://img.shields.io/badge/Swagger-UI-orange)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
 ![JWT](https://img.shields.io/badge/Auth-JWT-red)
-![Cache](https://img.shields.io/badge/Cache-Caffeine-yellow)
+
 
 # 🛒 Achat en Ligne — Microservice Spring Boot
 
@@ -49,7 +49,6 @@ Il permet de comprendre :
 - Comment mettre en place une architecture REST avec Spring Security et JWT ?
 - Comment gérer les entités UserAccount, Produits, Achats et Ventes via une API REST ?
 - Comment documenter une API avec Swagger UI ?
-- Comment implémenter un système de cache avec Caffeine ?
 - Comment gérer les logs avec SLF4J / Logback ?
 ```
 
@@ -153,21 +152,19 @@ Les repositories manipulent uniquement les **Entities**.
 
 ### Modèle de données
 
-| Entité      | Champs principaux                                      |
-|-------------|--------------------------------------------------------|
-| UserAccount | id (Long), email (String UNIQUE), password (String)   |
-| Produits    | ref (String PK), name, stock (double), user            |
-| Achats      | id (Long), dateP, quantity (double), product, user     |
-| Ventes      | id (Long), dateP, quantity (double), product, user     |
+ UserAccount | id (Long), email (String UNIQUE), password (String)   
+ Produits    | ref (String PK), name, stock (double), user            
+ Achats      | id (Long), dateP, quantity (double), product, user     
+ Ventes      | id (Long), dateP, quantity (double), product, user     
 
 ### Relations
 
 ```
-UserAccount  ──<  Produits
-UserAccount  ──<  Achats
-UserAccount  ──<  Ventes
-Produits     ──<  Achats
-Produits     ──<  Ventes
+UserAccount  ──>  Produits
+UserAccount  ──>  Achats
+UserAccount  ──>  Ventes
+Produits     ──>  Achats
+Produits     ──>  Ventes
 ```
 
 ---
@@ -232,7 +229,9 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
 ## Documentation API
 
 - Swagger UI : `http://localhost:8080/swagger-ui/index.html`
-
+ ![image1](img.png)
+  ![img2](img_1.png)
+  ![img3](img_2.png)
 > Pour tester les endpoints protégés dans Swagger :
 > 1. Appeler `POST /api/auth/login`
 > 2. Copier le token reçu
