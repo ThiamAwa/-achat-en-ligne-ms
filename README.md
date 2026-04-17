@@ -10,7 +10,7 @@
 ![JWT](https://img.shields.io/badge/Auth-JWT-red)
 
 
-# 🛒 Achat en Ligne — Microservice Spring Boot
+#  Achat en Ligne — Microservice Spring Boot
 
 # REQUIREMENTS
 Prérequis pour démarrer le projet :
@@ -141,14 +141,14 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
 
 ## Endpoints principaux
 
-### 🔓 Authentification (public)
+###  Authentification (public)
 
 - `POST /api/auth/register` → créer un compte utilisateur
    ![img5](img5.png)
 - `POST /api/auth/login` → se connecter et obtenir le token JWT
   ![img6](img6.png)
 
-### 👤 Users
+###  Users
 
 - `GET /api/users` → liste tous les utilisateurs
  ![img22](img22.png)
@@ -158,7 +158,7 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
    ![img24](img24.png)
 - `DELETE /api/users/{id}` → supprimer un utilisateur
 
-### 📦 Produits
+###  Produits
 
 - `GET /api/produits` → liste tous les produits
    ![img8](img8.png)
@@ -172,7 +172,7 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
 - `DELETE /api/produits/{ref}` → supprimer un produit
   ![img10](img10.png)
 
-### 🛒 Achats
+###  Achats
 
 - `GET /api/achats` → liste tous les achats
   ![img12](img12.png)
@@ -186,7 +186,7 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
 - `DELETE /api/achats/{id}` → supprimer un achat
   ![img14](img14.png)
 
-### 💰 Ventes
+###  Ventes
 
 - `GET /api/ventes` → liste toutes les ventes
   ![img16](img16.png)
@@ -209,11 +209,7 @@ Le token est valide **24 heures**. Toutes les routes hors `/api/auth/**` nécess
   ![img2](img2.png)
   ![img3](img3.png)
   ![img4](img4.png)
- Pour tester les endpoints protégés dans Swagger :
- 1. Appeler `POST /api/auth/login`
- 2. Copier le token reçu
-3. Cliquer sur **Authorize 🔒** en haut à droite
- 4. Saisir `Bearer <votre_token>`
+
 
 ---
 
